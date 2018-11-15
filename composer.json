@@ -1,0 +1,26 @@
+{
+    "name": "ailixter/gears-collection",
+    "description": "The project, which Gears Dictionary.",
+    "authors": [
+        {
+            "name": "ailixter",
+            "email": "ailixter@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ailixter\\Gears\\Dictionary\\": "./src/"
+        }
+    },
+
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/ailixter/gears.git"
+        }
+    ],
+
+    "require": {
+        "ailixter/gears": "master-dev"
+    }
+}
