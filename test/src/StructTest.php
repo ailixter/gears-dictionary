@@ -219,4 +219,12 @@ class StructTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    public function testArrayObject()
+    {
+        $test = new Struct(new \ArrayObject(['a' => ['b' => 123, 456]]));
+        $y = &$test->ref('a/b');
+        self::assertEquals(123, $y);
+        $y = 'y';
+        self::assertEquals('y', $test->get('a/b'));
+    }
 }

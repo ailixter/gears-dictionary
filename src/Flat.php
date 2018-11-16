@@ -6,12 +6,11 @@
 
 namespace Ailixter\Gears\Dictionary;
 
-use Ailixter\Gears\Dictionary\Exceptions\RequiredKeyException;
 
 /**
  * @author AII (Alexey Ilyin)
  */
-class Flat extends ReadonlyFlat implements DictionaryInterface
+class Flat extends ReadonlyFlat implements DictionaryExtraInterface
 {
     public function refer(array &$data)
     {

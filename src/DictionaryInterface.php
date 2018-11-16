@@ -12,7 +12,15 @@ namespace Ailixter\Gears\Dictionary;
  */
 interface DictionaryInterface extends ReadonlyDictionaryInterface
 {
+    /**
+     * @param string|int $key
+     * @return self
+     */
     public function remove($key);
-
+    /**
+     * @param string|int $key
+     * @param mixed $value
+     * @return self
+     */
     public function set($key, $value);
 }

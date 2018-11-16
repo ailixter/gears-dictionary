@@ -9,13 +9,8 @@ namespace Ailixter\Gears\Dictionary;
 /**
  * @author AII (Alexey Ilyin)
  */
-class Struct extends ReadonlyStruct implements DictionaryInterface
+class Struct extends ReadonlyStruct implements DictionaryExtraInterface
 {
-    public function __construct(array $data = [])
-    {
-        parent::__construct($data);
-    }
-
     /**
      * If exists $pool[$data([key])+], copy it to $data([key])+ recursively.
      * @param array $data
@@ -33,6 +28,12 @@ class Struct extends ReadonlyStruct implements DictionaryInterface
                     or settype($val, 'array');
             }
         }
+    }
+
+    public function refer(array &$data)
+    {
+        $this->$data = &$data;
+        return $this;
     }
 
     public function extract($path, $default = null)
