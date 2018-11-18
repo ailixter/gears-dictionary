@@ -139,6 +139,12 @@ class StructTest extends \PHPUnit_Framework_TestCase
         self::assertEquals(456, $object->var);
     }
 
+    public function testRefSuper()
+    {
+        (new Struct())->refer($_GET)->set('route', 'chapter/1');
+        self::assertEquals('chapter/1', $_GET['route']);
+    }
+
     public function testAdd()
     {
         $this->object->add('n/a', 123);

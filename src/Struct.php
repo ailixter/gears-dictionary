@@ -32,7 +32,7 @@ class Struct extends ReadonlyStruct implements DictionaryExtraInterface
 
     public function refer(array &$data)
     {
-        $this->$data = &$data;
+        $this->data = &$data;
         return $this;
     }
 

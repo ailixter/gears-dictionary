@@ -14,7 +14,7 @@ class Flat extends ReadonlyFlat implements DictionaryExtraInterface
 {
     public function refer(array &$data)
     {
-        $this->$data = &$data;
+        $this->data = &$data;
         return $this;
     }
 
