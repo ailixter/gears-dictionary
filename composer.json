@@ -21,6 +21,7 @@
     ],
 
     "require": {
+        "php": "^7",
         "ailixter/gears": "master-dev"
     }
 }

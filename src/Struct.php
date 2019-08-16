@@ -96,7 +96,6 @@ class Struct extends ReadonlyStruct implements DictionaryExtraInterface
             $tdat = &$data;
             $data = &$data[$name];
         }
-        assert('isset($tnam)');
         $tdat[$tnam] = &$value;
         return $this;
     }
@@ -131,7 +130,6 @@ class Struct extends ReadonlyStruct implements DictionaryExtraInterface
             $tdat = &$data;
             $data = &$data[$name];
         }
-        assert('isset($tnam)');
         unset($tdat[$tnam]);
         return $this;
     }
